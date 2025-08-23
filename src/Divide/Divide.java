@@ -17,7 +17,7 @@ public class Divide {
           if (c == q) {
             break;
           }
-          if (i > 10) { // 10 and 20 above can be increased, if needed.
+          /* if (i > 10) { // 10 and 20 above can be increased, if needed.
             q -= c;
             q = Math.abs(q);
             if (q == r) {
@@ -25,7 +25,7 @@ public class Divide {
               break;
             }
             r = q;
-          }
+          } */
           q = c;
         }
         return q;
