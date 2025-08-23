@@ -10,10 +10,10 @@ package divide;
 public class Divide {
       public static double MultInv(final double d) {
         double c, q, r;
-        q = 1.0 / d;
+        q = 1 / d;
         r = 0;
         for (int i = 0; i <= 99; i++) { // 99
-          c = q * (2.0 - q * d);
+          c = q * (2 - q * d);
           if (c == q) {
             break;
           }
