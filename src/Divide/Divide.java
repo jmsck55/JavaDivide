@@ -12,7 +12,7 @@ public class Divide {
         double c, q, r;
         q = 1.0 / d;
         r = 0;
-        for (int i = 0; i <= 77; i++) { // 77
+        for (int i = 0; i <= 99; i++) { // 99
           c = q * (2 - q * d);
           if (c == q) {
             break;
