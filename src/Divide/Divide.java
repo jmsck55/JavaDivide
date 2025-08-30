@@ -12,7 +12,7 @@ public class Divide {
         double c, q, r;
         q = 1 / d;
         r = 0;
-        for (int i = 0; i <= 1025; i++) { // 1025
+        for (int i = 0; i <= 1050; i++) { // 1050
           c = q * (2 - q * d);
           if (c == q) {
             break;
@@ -31,7 +31,7 @@ public class Divide {
         float c, q, r;
         q = 1 / d;
         r = 0;
-        for (int i = 0; i <= 1025; i++) { // 1025
+        for (int i = 0; i <= 1050; i++) { // 1050
           c = q * (2 - q * d);
           if (c == q) {
             break;
