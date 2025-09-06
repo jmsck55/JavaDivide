@@ -12,18 +12,18 @@ public class Divide {
         double c, q, r;
         q = 1 / d;
         r = 0;
-        for (int i = 0; i <= 1050; i++) { // 1050
+        for (int i = 0; i <= 100050; i++) { // 100050
           c = q * d;
           if (c == 1) {
-            break;
+            return q;
           }
           if (c == r) {
-            break;
+            return q;
           }
           q *= (2 - c);
           r = c;
         }
-        return q;
+        return 1 / 0; // error
       }
       public static double Divide(final double n, final double d) {
         double q;
@@ -35,18 +35,18 @@ public class Divide {
         float c, q, r;
         q = 1 / d;
         r = 0;
-        for (int i = 0; i <= 1050; i++) { // 1050
+        for (int i = 0; i <= 100050; i++) { // 100050
           c = q * d;
           if (c == 1) {
-            break;
+            return q;
           }
           if (c == r) {
-            break;
+            return q;
           }
           q *= (2 - c);
           r = c;
         }
-        return q;
+        return 1 / 0; // error
       }
       public static float Dividef(final float n, final float d) {
         float q;
