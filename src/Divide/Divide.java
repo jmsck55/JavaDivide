@@ -13,11 +13,15 @@ public class Divide {
         q = 1 / d;
         r = 0;
         for (int i = 0; i <= 1050; i++) { // 1050
-          c = q * (2 - q * d);
-          if (c == q) {
+          c = q * d;
+          if (c == 1) {
             break;
           }
-          q = c;
+          if (c == r) {
+            break;
+          }
+          q *= (2 - c);
+          r = c;
         }
         return q;
       }
@@ -32,11 +36,15 @@ public class Divide {
         q = 1 / d;
         r = 0;
         for (int i = 0; i <= 1050; i++) { // 1050
-          c = q * (2 - q * d);
-          if (c == q) {
+          c = q * d;
+          if (c == 1) {
             break;
           }
-          q = c;
+          if (c == r) {
+            break;
+          }
+          q *= (2 - c);
+          r = c;
         }
         return q;
       }
