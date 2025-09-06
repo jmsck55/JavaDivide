@@ -23,7 +23,7 @@ public class Divide {
           q *= (2 - c);
           r = c;
         }
-        return 1 / 0; // error
+        throw new java.lang.Exception();
       }
       public static double Divide(final double n, final double d) {
         double q;
@@ -46,7 +46,7 @@ public class Divide {
           q *= (2 - c);
           r = c;
         }
-        return 1 / 0; // error
+        throw new java.lang.Exception();
       }
       public static float Dividef(final float n, final float d) {
         float q;
