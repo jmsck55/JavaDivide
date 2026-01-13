@@ -68,5 +68,23 @@ public static double NthRootf(float x, short n)
             return NthRoot(x, n);
       }
 
+public static double Sqrt(double x)
+{
+  return NthRoot(x, 2);
+}
+public static double Sqrtf(float x)
+      {
+            return Sqrt(x);
+      }
+
+public static double CubeRoot(double x)
+{
+  return NthRoot(x, 3);
+}
+public static double CubeRootf(float x)
+      {
+            return CubeRoot(x);
+      }
+
 
 }
