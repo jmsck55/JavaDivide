@@ -113,6 +113,10 @@ public static double Exp(double x)
   }
   return sum;
 }
+public static double Expf(float x)
+      {
+            return Exp(x);
+      }
 
 
 // Raw function: Natural Logarithm
@@ -186,6 +190,10 @@ public static double Log(double a)
     sum = f - (sum);
     return sum;
 }
+public static double Logf(float x)
+      {
+            return Log(x);
+      }
 
 
 }
