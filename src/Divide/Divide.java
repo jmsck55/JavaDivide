@@ -2,6 +2,7 @@
 // Accurate Divide functions for floats and doubles as a Java class.
 
 package divide;
+import java.lang.Math;
 
 /**
  *
