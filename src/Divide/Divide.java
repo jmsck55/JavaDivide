@@ -55,7 +55,7 @@ public class Divide {
         return q;
       }
 
-public static double NthRootf(float x, short n)
+public static double NthRoot(double x, short n)
 {
   double quotient, average, guess;
   guess = Math.pow(x, MultInv(n));
@@ -63,6 +63,10 @@ public static double NthRootf(float x, short n)
   average = Divide((quotient + (n-1) * guess), n);
   return average;
 }
+public static double NthRootf(float x, short n)
+      {
+            return NthRoot(x, n);
+      }
 
-      
+
 }
