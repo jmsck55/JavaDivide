@@ -2,6 +2,7 @@
 // Accurate Divide functions for floats and doubles as a Java class.
 
 package divide;
+import java.lang.Math;
 
 /**
  *
@@ -53,4 +54,19 @@ public class Divide {
         q = n * MultInvf(d);
         return q;
       }
+
+public static double NthRoot(double x, short n)
+{
+  double quotient, average, guess;
+  guess = Math.pow(x, MultInv(n));
+  quotient = Divide(x, Math.pow(guess, (n-1)));
+  average = Divide((quotient + (n-1) * guess), n);
+  return average;
+}
+public static double NthRootf(float x, short n)
+      {
+            return NthRoot(x, n);
+      }
+
+
 }
