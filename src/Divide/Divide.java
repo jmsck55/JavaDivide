@@ -31,7 +31,7 @@ public class Divide {
           if (t == r) {
             return q;
           }
-          if (i > 1000000) {
+          if (i > 100) {
           if (t == a) {
             return q;
           }
@@ -78,7 +78,7 @@ public class Divide {
           if (t == r) {
             return q;
           }
-          if (i > 1000000) {
+          if (i > 100) {
           if (t == a) {
             return q;
           }
