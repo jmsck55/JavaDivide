@@ -54,19 +54,19 @@ public class Divide {
 
       public static float MultInvf(final float d) {
         float c, q, r, a, b;
-        if (d != 0) {
-        if (d == 1) {
+        if (d != 0f) {
+        if (d == 1f) {
           return 1f;
-        if (d == 2) {
+        if (d == 2f) {
           return 0.5f;
         }
-        q = 1 / d;
+        q = 1f / d;
         r = 0f;
         a = 0f;
         b = 0f;
         for (int i = 0; i <= 1000000; i++) {
           c = q * d;
-          if (c == 1) {
+          if (c == 1f) {
             return q;
           }
           if (c == r) {
@@ -82,7 +82,7 @@ public class Divide {
           b = a;
           a = r;
           }
-          q *= (2 - c);
+          q *= (2f - c);
           r = c;
         }
         }
