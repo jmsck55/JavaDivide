@@ -22,7 +22,7 @@ public class Divide {
         r = 0;
         a = 0;
         b = 0;
-        for (int i = 0; i <= 1000000; i++) {
+        for (int i = 0; i <= 10000000; i++) {
           c = q * d;
           if (c == 1) {
             return q;
@@ -30,7 +30,7 @@ public class Divide {
           if (c == r) {
             return q;
           }
-          if (i > 100000) {
+          if (i > 1000000) {
           if (c == a) {
             return q;
           }
@@ -64,7 +64,7 @@ public class Divide {
         r = 0f;
         a = 0f;
         b = 0f;
-        for (int i = 0; i <= 1000000; i++) {
+        for (int i = 0; i <= 10000000; i++) {
           c = q * d;
           if (c == 1f) {
             return q;
@@ -72,7 +72,7 @@ public class Divide {
           if (c == r) {
             return q;
           }
-          if (i > 100000) {
+          if (i > 1000000) {
           if (c == a) {
             return q;
           }
