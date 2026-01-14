@@ -10,7 +10,7 @@ import java.lang.Math;
  */
 public class Divide {
       public static double MultInv(final double d) {
-        double c, q, r, a, b;
+        double t, q, r, a, b, c;
         if (d != 0) {
         if (d == 1) {
           return 1;
@@ -22,26 +22,31 @@ public class Divide {
         r = 0;
         a = 0;
         b = 0;
+        c = 0;
         for (int i = 0; i <= 10000000; i++) {
-          c = q * d;
-          if (c == 1) {
+          t = q * d;
+          if (t == 1) {
             return q;
           }
-          if (c == r) {
+          if (t == r) {
             return q;
           }
           if (i > 1000000) {
-          if (c == a) {
+          if (t == a) {
             return q;
           }
-          if (c == b) {
+          if (t == b) {
             return q;
           }
+          if (t == c) {
+            return q;
+          }
+          c = b;
           b = a;
           a = r;
           }
-          q *= (2 - c);
-          r = c;
+          q *= (2 - t);
+          r = t;
         }
         }
         throw new java.lang.Exception();
@@ -53,7 +58,7 @@ public class Divide {
       }
 
       public static float MultInvf(final float d) {
-        float c, q, r, a, b;
+        float t, q, r, a, b, c;
         if (d != 0f) {
         if (d == 1f) {
           return 1f;
@@ -64,26 +69,31 @@ public class Divide {
         r = 0f;
         a = 0f;
         b = 0f;
+        c = 0f;
         for (int i = 0; i <= 10000000; i++) {
-          c = q * d;
-          if (c == 1f) {
+          t = q * d;
+          if (t == 1f) {
             return q;
           }
-          if (c == r) {
+          if (t == r) {
             return q;
           }
           if (i > 1000000) {
-          if (c == a) {
+          if (t == a) {
             return q;
           }
-          if (c == b) {
+          if (t == b) {
             return q;
           }
+          if (t == c) {
+            return q;
+          }
+          c = b;
           b = a;
           a = r;
           }
-          q *= (2f - c);
-          r = c;
+          q *= (2f - t);
+          r = t;
         }
         }
         throw new java.lang.Exception();
