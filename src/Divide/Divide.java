@@ -10,10 +10,19 @@ import java.lang.Math;
  */
 public class Divide {
       public static double MultInv(final double d) {
-        double c, q, r;
+        double c, q, r, a, b;
+        if (d != 0) {
+        if (d == 1) {
+          return 1;
+        }
+        if (d == 2) {
+          return 0.5;
+        }
         q = 1 / d;
         r = 0;
-        for (int i = 0; i <= 100050; i++) { // 100050
+        a = 0;
+        b = 0;
+        for (int i = 0; i <= 1000000; i++) {
           c = q * d;
           if (c == 1) {
             return q;
@@ -21,8 +30,19 @@ public class Divide {
           if (c == r) {
             return q;
           }
+          if (i > 100000) {
+          if (c == a) {
+            return q;
+          }
+          if (c == b) {
+            return q;
+          }
+          b = a;
+          a = r;
+          }
           q *= (2 - c);
           r = c;
+        }
         }
         throw new java.lang.Exception();
       }
@@ -33,10 +53,18 @@ public class Divide {
       }
 
       public static float MultInvf(final float d) {
-        float c, q, r;
+        float c, q, r, a, b;
+        if (d != 0) {
+        if (d == 1) {
+          return 1f;
+        if (d == 2) {
+          return 0.5f;
+        }
         q = 1 / d;
-        r = 0;
-        for (int i = 0; i <= 100050; i++) { // 100050
+        r = 0f;
+        a = 0f;
+        b = 0f;
+        for (int i = 0; i <= 1000000; i++) {
           c = q * d;
           if (c == 1) {
             return q;
@@ -44,8 +72,19 @@ public class Divide {
           if (c == r) {
             return q;
           }
+          if (i > 100000) {
+          if (c == a) {
+            return q;
+          }
+          if (c == b) {
+            return q;
+          }
+          b = a;
+          a = r;
+          }
           q *= (2 - c);
           r = c;
+        }
         }
         throw new java.lang.Exception();
       }
@@ -55,7 +94,7 @@ public class Divide {
         return q;
       }
 
-public static double NthRoot(double x, short n)
+public static double NthRoot(final double x, final short n)
 {
   double quotient, average, guess;
   guess = Math.pow(x, MultInv(n));
@@ -63,31 +102,31 @@ public static double NthRoot(double x, short n)
   average = Divide((quotient + (n-1) * guess), n);
   return average;
 }
-public static double NthRootf(float x, short n)
+public static double NthRootf(final float x, final short n)
       {
             return NthRoot(x, n);
       }
 
-public static double Sqrt(double x)
+public static double Sqrt(final double x)
 {
   return NthRoot(x, 2);
 }
-public static double Sqrtf(float x)
+public static double Sqrtf(final float x)
       {
             return Sqrt(x);
       }
 
-public static double CubeRoot(double x)
+public static double Cbrt(final double x)
 {
   return NthRoot(x, 3);
 }
-public static double CubeRootf(float x)
+public static double Cbrtf(final float x)
       {
-            return CubeRoot(x);
+            return Cbrt(x);
       }
 
 
-public static double Exp(double x)
+public static double Exp(final double x)
 {
 // using taylor series
 // https://en.wikipedia.org/wiki/TaylorSeries
@@ -113,7 +152,7 @@ public static double Exp(double x)
   }
   return sum;
 }
-public static double Expf(float x)
+public static double Expf(final float x)
       {
             return Exp(x);
       }
@@ -121,7 +160,7 @@ public static double Expf(float x)
 
 // Raw function: Natural Logarithm
 
-public static double Log(double a)
+public static double Log(final double a)
 {
     // Function: NaturalLogarithm()
     // Use for testing the method.
@@ -190,7 +229,7 @@ public static double Log(double a)
     sum = f - (sum);
     return sum;
 }
-public static double Logf(float x)
+public static double Logf(final float x)
       {
             return Log(x);
       }
