@@ -9,6 +9,26 @@ import java.lang.Math;
  * @author jmsck
  */
 public class Divide {
+      public static final int AdjustUp = 1;
+      public static final int AdjustDown = -1;
+      public static int AdjustMethod = 0;
+      public static double Adjust(double a) {
+        int exponent, r;
+        double b, c;
+        exponent = Math.getExponent(a);
+        b = Math.pow(2, 52 - exponent);
+        c = a / b;
+        r = AdjustMethod;
+        if (r == AdjustDown) {
+          c = Math.floor(c);
+        }
+        if (r == AdjustUp) {
+          c = Math.ceil(c);
+        }
+        c *= b;
+        return c;
+      }
+      
       public static double MultInv(final double d) {
         double t, q, r, a, b, c;
         if (d != 0) {
@@ -26,20 +46,14 @@ public class Divide {
         for (int i = 0; i <= 10000000; i++) {
           t = q * d;
           if (t == 1) {
-            return q;
+            return Adjust(q);
           }
           if (t == r) {
-            return q;
+            return Adjust(q);
           }
           if (i > 100) {
-          if (t == a) {
-            return q;
-          }
-          if (t == b) {
-            return q;
-          }
-          if (t == c) {
-            return q;
+          if ((t == a) || (t == b) || (t == c) {
+            return Adjust(q);
           }
           c = b;
           b = a;
