@@ -17,7 +17,7 @@ public class Divide {
         double b, c;
         exponent = Math.getExponent(a);
         b = Math.pow(2, 52 - exponent);
-        c = a / b;
+        c = a * b;
         r = AdjustMethod;
         if (r == AdjustDown) {
           c = Math.floor(c);
@@ -25,7 +25,7 @@ public class Divide {
         if (r == AdjustUp) {
           c = Math.ceil(c);
         }
-        c *= b;
+        c /= b;
         return c;
       }
       
